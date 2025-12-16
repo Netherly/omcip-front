@@ -1,0 +1,125 @@
+.character-page {
+  min-height: 100vh;
+  max-height: 100vh;
+  background: linear-gradient(180deg, #0f1624 0%, #1a1a2e 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.character-page__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  padding-bottom: 20px;
+}
+
+.character-page__image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.character-page__image {
+  width: 219px;
+  height: 199px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.character-page__shadow {
+  width: 149px;
+  height: 59px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  filter: blur(15px);
+  margin-top: -70px;
+}
+
+.character-page__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 90px;
+}
+
+.character-page__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+}
+
+.character-page__invite-button {
+  width: 230px;
+  padding: 12px 28px;
+  border-radius: 25px;
+  box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25), 0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25), inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+  background: linear-gradient(180deg, rgba(70.62, 242.71, 255, 1), rgba(0, 180.41, 208.17, 1) 83%);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.character-page__invite-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.character-page__invite-text {
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -1.1%;
+  text-align: center;
+}
+
+.character-page__invite-count {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 8px;
+  padding-left: 8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.character-page__social-link {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.character-page__social-link:active {
+  transform: scale(0.95);
+}
+
+.character-page__social-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

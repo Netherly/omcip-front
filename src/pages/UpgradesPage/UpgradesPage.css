@@ -1,0 +1,92 @@
+.upgrades-page {
+  min-height: 100vh;
+  max-height: 100vh;
+  background: linear-gradient(180deg, #0f1624 0%, #1a1a2e 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.upgrades-page__content {
+  flex: 1;
+  padding: min(25px, 4vw) min(16px, 4vw);
+  padding-bottom: 90px; /* Место для футера */
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.upgrades-page__content::-webkit-scrollbar {
+  display: none;
+}
+
+.upgrades-page__title {
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: clamp(20px, 5vw, 24px);
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+    text-align: center;
+    margin: 0 0 min(20px, 4vw) 0;
+}
+
+.upgrades-page__tabs {
+  display: flex;
+  margin: 0 0 min(20px, 4vw) 0;
+  padding: 2px;
+  border-radius: 8px;
+  background: rgba(44, 44, 44, 0.8);
+  gap: 4px;
+}
+
+.upgrades-page__tab {
+  flex: 1;
+  padding: clamp(10px, 2.5vw, 12px) clamp(12px, 3vw, 16px);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(12px, 3vw, 13px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.upgrades-page__tab--active {
+  box-sizing: border-box;
+  border: 1px solid rgba(56, 223, 239, 1);
+  border-radius: 8px;
+  background: rgba(44, 44, 44, 0.8);
+  color: #fff;
+}
+
+.upgrades-page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: min(24px, 4vw);
+  margin-bottom: min(24px, 4vw);
+}
+
+.upgrades-page__special {
+  width: 100%;
+}
+
+/* Адаптив для очень маленьких экранов */
+@media (max-width: 360px) {
+  .upgrades-page__grid {
+    gap: 16px;
+  }
+  
+  .upgrades-page__content {
+    padding-bottom: 80px;
+  }
+}
+
+
+

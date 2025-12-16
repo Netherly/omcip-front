@@ -1,0 +1,163 @@
+.login-reward-card {
+  background: rgba(44, 44, 44, 0.8);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.login-reward-card--locked {
+  opacity: 0.5;
+}
+.login-reward-card--claimed {
+  opacity: 0.7;
+}
+.login-reward-card__left {
+  flex-shrink: 0;
+}
+.login-reward-card__day-box {
+  width: 62px;
+  height: 62px;
+  border-radius: 8px;
+  box-shadow: inset 0px 4px 4px 0px rgba(255, 255, 255, 0.47);
+  background: rgba(44, 44, 44, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.login-reward-card__day-box--active {
+  background: linear-gradient(226.57deg, rgba(4.903846263885498, 226.193115234375, 255, 1), rgba(1.752155065536499, 81.20565032958984, 227.7836456298828, 1) 100%);
+  border: none;
+  animation: pulse-box 2s ease-in-out infinite;
+}
+.login-reward-card__day-box--claimed {
+  background: linear-gradient(226.57deg, rgba(4.903846263885498, 255, 42.41826629638672, 1), rgba(255, 119, 0, 1) 100%);
+  border: none;
+}
+.login-reward-card__day-text {
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1.1%;
+  text-align: center;
+}
+.login-reward-card__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.login-reward-card__title {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1.1%;
+}
+.login-reward-card__description {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -1.1%;
+}
+.login-reward-card__button {
+  width: 146px;
+  height: 41px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  box-sizing: border-box;
+  border: 1px solid rgba(59, 216, 231, 0.5);
+  border-radius: 25px;
+  box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25), 0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(44, 44, 44, 0.8);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.login-reward-card__button--can-claim {
+  border: none;
+  border-radius: 25px;
+  box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25), 0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25), inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+  background: linear-gradient(180deg, rgba(70.62, 242.71, 255, 1), rgba(0, 180.41, 208.17, 1) 83%);
+  cursor: pointer;
+  animation: glow 2s ease-in-out infinite;
+}
+.login-reward-card__button--can-claim .login-reward-card__button-text {
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -1.1%;
+  text-align: center;
+}
+.login-reward-card__button--can-claim:active {
+  transform: scale(0.95);
+  box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.35), 0px 3px 5px 0px rgba(0, 0, 0, 0.25), inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+}
+.login-reward-card__button:active:not(:disabled):not(.login-reward-card__button--can-claim) {
+  border-radius: 25px;
+  box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25), 0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25), inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+  background: linear-gradient(180deg, rgba(70.6153564453125, 242.7076873779297, 255, 1), rgba(0, 180.4124755859375, 208.1682586669922, 1) 83%);
+}
+
+.login-reward-card__button--claimed,
+.login-reward-card__button--locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-reward-card__button-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.login-reward-card__button-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -1.1%;
+}
+@media (max-width: 360px) {
+  .login-reward-card {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .login-reward-card__day-box {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .login-reward-card__title {
+    font-size: 14px;
+  }
+  
+  .login-reward-card__description {
+    font-size: 12px;
+  }
+  
+  .login-reward-card__button {
+    width: 130px;
+    height: 38px;
+    padding: 10px 20px;
+  }
+  
+  .login-reward-card__button-text {
+    font-size: 14px;
+  }
+}

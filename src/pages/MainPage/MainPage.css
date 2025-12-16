@@ -1,0 +1,77 @@
+.main-page{
+    height: 100vh;
+    width: 100vw;
+}
+.main-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0f1624 0%, #1a1a2e 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    transition: background-image 0.5s ease;
+}
+.main-page-content{
+    flex: 1;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.main-page-game-area {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 55px;
+    gap: 20px;
+    position: relative;
+}
+.main-page-clicker-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.main-page-energy {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-page-upgrade-button {
+    width: 230px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 98px;
+    padding: 12px 28px 12px 28px;
+    border-radius: 25px;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25),0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25),inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+    background: var(--gradient, linear-gradient(180.00deg, rgba(70.6153564453125, 242.7076873779297, 255, 1),rgba(0, 180.4124755859375, 208.1682586669922, 1) 83%));
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+.main-page-upgrade-button:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+.main-page-upgrade-text {
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -1.1%;
+    text-align: center;
+}

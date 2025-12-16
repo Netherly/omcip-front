@@ -1,0 +1,214 @@
+.task-card {
+    background: rgba(44, 44, 44, 0.8);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+.task-card:active {
+    transform: scale(0.98);
+}
+.task-card__left {
+    flex-shrink: 0;
+}
+.task-card__image-wrapper {
+    width: 62px;
+    height: 62px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.task-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.task-card__placeholder {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.task-card__progress-box {
+    width: 62px;
+    height: 62px;
+    border-radius: 8px;
+    box-shadow: inset 0px 4px 4px 0px rgba(255, 255, 255, 0.47);
+    background: linear-gradient(226.57deg, rgba(4.903846263885498, 226.193115234375, 255, 1),rgba(1.752155065536499, 81.20565032958984, 227.7836456298828, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.task-card__progress-box--completed {
+    border-radius: 8px;
+    box-shadow: inset 0px 4px 4px 0px rgba(255, 255, 255, 0.47);
+    background: linear-gradient(226.57deg, rgba(4.903846263885498, 255, 42.41826629638672, 1),rgba(255, 119, 0, 1) 100%);
+}
+.task-card-current{
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+}
+.task-card__progress-text {
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.task-card__progress-text--vertical {
+    flex-direction: column;
+    gap: 2px;
+    line-height: 100%;
+}
+.task-card__progress-text--vertical .task-card-current {
+    font-size: 14px;
+}
+.task-card__progress-text--vertical .task-card__progress-separator {
+    display: block;
+    font-size: 12px;
+    opacity: 0.7;
+}
+.task-card__progress-text--vertical .task-card__progress-max {
+    font-size: 14px;
+}
+.task-card__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.task-card__status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.task-card__status-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+.task-card__status-icon--completed {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border-color: #22c55e;
+}
+.task-card__status-icon--can-claim {
+    background: linear-gradient(180deg, rgba(70.62, 242.71, 255, 1), rgba(0, 180.41, 208.17, 1) 83%);
+    color: #fff;
+    border: none;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.task-card__status-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+    text-align: center;
+}
+.task-card__status-text--completed {
+    color: rgba(34, 197, 94, 0.9);
+}
+.task-card__status-text--can-claim {
+    color: rgba(70.62, 242.71, 255, 1);
+    font-weight: 600;
+}
+
+.task-card__title {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+    margin: 0;
+}
+.task-card__reward {
+    width: 146px;
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px 12px 28px;
+    box-sizing: border-box;
+    border: 1px solid rgba(59, 216, 231, 0.5);
+    border-radius: 25px;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25),0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(44, 44, 44, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.task-card__reward--active {
+    border: none;
+    border-radius: 25px;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25), 0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25), inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+    background: linear-gradient(180deg, rgba(70.62, 242.71, 255, 1), rgba(0, 180.41, 208.17, 1) 83%);
+    cursor: pointer;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.task-card__reward--active .task-card__reward-text {
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -1.1%;
+    text-align: center;
+}
+
+.task-card__reward--active:active {
+    transform: scale(0.95);
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.35), 0px 3px 5px 0px rgba(0, 0, 0, 0.25), inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+}
+
+.task-card__reward:active:not(.task-card__reward--disabled):not(.task-card__reward--active) {
+    border-radius: 25px;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25),0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25),inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+    background: linear-gradient(180.00deg, rgba(70.6153564453125, 242.7076873779297, 255, 1),rgba(0, 180.4124755859375, 208.1682586669922, 1) 83%);
+}
+
+.task-card__reward--disabled {
+    box-sizing: border-box;
+    border: 1px solid rgba(59, 216, 231, 0.5);
+    border-radius: 25px;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25),0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(44, 44, 44, 0.8);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.task-card__reward-icon {
+    width: 18px;
+    height: 18px;
+}
+.task-card__reward-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -1.1%;
+}

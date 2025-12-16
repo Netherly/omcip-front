@@ -1,0 +1,164 @@
+.energy-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.energy-bar__max-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.energy-bar__max-text {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.energy-bar__max-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Контейнер энергии */
+.energy-bar__container {
+  position: relative;
+  width: 32px;
+  height: 192px;
+  background: rgba(33, 33, 33, 0.56);
+  border: 2px solid rgba(236, 173, 29, 0.29);
+  border-radius: 77px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  overflow: hidden;
+}
+
+/* Внутренняя область для заполнения */
+.energy-bar__inner {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 8px);
+  height: calc(100% - 6px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* ИСПРАВЛЕНО: было center, теперь flex-end */
+}
+
+/* Заполнение энергии */
+.energy-bar__fill {
+  position: relative; /* Добавлено для корректного позиционирования дочерних элементов */
+  width: 100%;
+  background: linear-gradient(180deg, #F5B922 0%, #B66400 100%);
+  border-radius: 77px;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+/* Когда заполнение почти полное - скругляем верх */
+.energy-bar__fill--full {
+  border-radius: 77px;
+}
+
+@keyframes wave-pulse {
+  0%, 100% {
+    transform: scaleX(1) translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scaleX(1.2) translateY(-2px);
+    opacity: 1;
+  }
+}
+
+/* Тень внутри заполнения */
+.energy-bar__shadow {
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  width: 7px;
+  height: 103px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
+  border-bottom-right-radius: 77px;
+  border-top-left-radius: 77px;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.91;
+}
+
+/* Пузырики */
+.energy-bar__bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  animation: bubble-float 3s ease-in-out infinite;
+}
+
+.energy-bar__bubble--1 {
+  width: 4px;
+  height: 4px;
+  top: 20%;
+  right: 3px;
+  animation-delay: 0s;
+}
+
+.energy-bar__bubble--2 {
+  width: 4px;
+  height: 4px;
+  top: 50%;
+  right: 2px;
+  animation-delay: 1s;
+}
+
+.energy-bar__bubble--3 {
+  width: 5px;
+  height: 5px;
+  top: 70%;
+  right: 4px;
+  animation-delay: 2s;
+}
+
+@keyframes bubble-float {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+/* Текущее значение энергии */
+.energy-bar__current {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Адаптивность */
+@media (max-width: 375px) {
+  .energy-bar__container {
+    width: 30px;
+    height: 170px;
+  }
+
+  .energy-bar__current {
+    font-size: 12px;
+  }
+}

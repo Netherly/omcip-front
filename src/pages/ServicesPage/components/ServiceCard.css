@@ -1,0 +1,124 @@
+.service-card {
+    background: rgba(44, 44, 44, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    gap: 7px;
+    /* backdrop-filter: blur(10px); */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+.service-card__image-wrapper {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.service-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.service-card__content-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.service-card__placeholder {
+    font-size: 40px;
+}
+.service-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.service-card__content--blurred {
+  filter: blur(4px);
+  pointer-events: none;
+}
+.service-card__description {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+    text-align: left;
+    margin: 0;
+}
+.service-card__button {
+    width: 126px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8;
+    padding: 12px 28px 12px 28px;
+    border-radius: 25px;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25),0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25),inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+    background: linear-gradient(180.00deg, rgba(70.6153564453125, 242.7076873779297, 255, 1),rgba(0, 180.4124755859375, 208.1682586669922, 1) 83%);
+}
+.service-card__button--disabled {
+    box-sizing: border-box;
+    border: 1px solid rgba(59, 216, 231, 0.5);
+    border-radius: 25px;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25),0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(44, 44, 44, 0.8);
+}
+.service-card__button-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.service-card__button-text {
+  color: #ffffff;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.service-card__button-cooldown {
+  font-size: 12px;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.7);
+}
+.service-card__lock-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  min-width: 180px;
+  white-space: normal;
+  text-align: center;
+}
+
+.service-card__lock-text {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1.1%;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.service-card__lock-count {
+  color: rgba(10, 191, 208, 1);
+}

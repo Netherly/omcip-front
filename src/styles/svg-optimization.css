@@ -1,0 +1,87 @@
+/* Оптимизация SVG для iOS и Retina дисплеев */
+
+/* Улучшение качества SVG на iOS */
+img[src$=".svg"],
+img[src*=".svg"] {
+  /* Улучшенный рендеринг для Retina */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  
+  /* Включение GPU ускорения */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  
+  /* Предотвращение размытия */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  
+  /* Сглаживание для лучшего качества */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Предотвращение размытия при масштабировании */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+}
+
+/* Специфичные фиксы для iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  img[src$=".svg"],
+  img[src*=".svg"] {
+    /* Форсируем правильное отображение на iOS */
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    
+    /* Убираем размытие на iOS */
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Для SVG в background-image */
+.main-page,
+.services-page,
+.tasks-page,
+.upgrades-page {
+  /* Улучшение качества фоновых изображений */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Для конкретных компонентов с SVG */
+.tooth-clicker__image,
+.upgrade-card__image,
+.service-card__image,
+.task-card__image {
+  /* Максимальное качество для основных изображений */
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-font-smoothing: antialiased;
+  transform: translateZ(0) scale(1.0001); /* Hack для iOS */
+}
+
+/* Для иконок монет и мелких SVG */
+.progress-bar__coin-icon,
+.upgrade-card__coin-icon,
+.service-card__button-icon,
+.task-card__reward-icon,
+.header__stat-icon {
+  /* Четкие края для мелких иконок */
+  image-rendering: -webkit-optimize-contrast;
+  shape-rendering: crispEdges;
+  transform: translateZ(0);
+}
+
+/* Дополнительно для Retina дисплеев */
+@media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) {
+  img[src$=".svg"],
+  img[src*=".svg"] {
+    /* Усиленная оптимизация для Retina */
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}

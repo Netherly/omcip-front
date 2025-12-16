@@ -1,0 +1,162 @@
+/* Используем те же стили что и для UpgradeCard
+.upgrade-card {
+    background: rgba(44, 44, 44, 0.8);
+    border-radius: clamp(12px, 3vw, 16px);
+    padding: clamp(10px, 2.5vw, 12px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 2.5vw, 12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.upgrade-card--locked {
+    opacity: 0.6;
+    background: rgba(44, 44, 44, 0.5);
+}
+
+.upgrade-card--special {
+    grid-column: 1 / -1;
+}
+
+.upgrade-card__top {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(10px, 2.5vw, 12px);
+    flex: 1;
+}
+
+.upgrade-card__image-wrapper {
+    width: clamp(45px, 11vw, 51px);
+    height: clamp(45px, 11vw, 51px);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 180, 208, 1) 10%,
+        rgba(14, 183, 205, 1) 30%,
+        rgba(26, 198, 219, 0) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.upgrade-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.upgrade-card__placeholder {
+    font-size: clamp(24px, 6vw, 32px);
+}
+
+.upgrade-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3px, 1vw, 4px);
+    flex: 1;
+    min-width: 0;
+}
+
+.upgrade-card__name {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Inter;
+    font-size: clamp(14px, 3.5vw, 16px);
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+    text-align: left;
+    margin-bottom: clamp(8px, 2vw, 18px);
+    word-wrap: break-word;
+}
+
+.upgrade-card__label {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Inter;
+    font-size: clamp(12px, 3vw, 14px);
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+    text-align: left;
+}
+
+.upgrade-card__value {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: clamp(4px, 1.5vw, 6px);
+}
+
+.upgrade-card__coins {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Inter;
+    font-size: clamp(12px, 3vw, 14px);
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+    text-align: left;
+}
+
+.upgrade-card__button {
+    height: clamp(38px, 9vw, 41px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(8px, 2vw, 10px);
+    padding: clamp(10px, 2.5vw, 12px) clamp(20px, 5vw, 28px);
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25),
+                0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25),
+                inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+    background: linear-gradient(180.00deg, rgba(70.6153564453125, 242.7076873779297, 255, 1),rgba(0, 180.4124755859375, 208.1682586669922, 1) 83%);
+    transition: all 0.2s ease;
+}
+
+.upgrade-card__button:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.upgrade-card__button--disabled,
+.upgrade-card__button--purchased,
+.upgrade-card__button--locked {
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25),0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(44, 44, 44, 0.8);
+    cursor: not-allowed;
+}
+
+.upgrade-card__button--purchased {
+    cursor: default;
+}
+
+.upgrade-card__button-icon {
+    width: clamp(16px, 4vw, 20px);
+    height: clamp(16px, 4vw, 20px);
+}
+
+.upgrade-card__button-text {
+    color: #ffffff;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: clamp(14px, 3.5vw, 16px);
+    font-weight: 700;
+    line-height: 120%;
+}
+
+@media (max-width: 360px) {
+    .upgrade-card {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .upgrade-card__info {
+        margin-right: 0;
+    }
+} */

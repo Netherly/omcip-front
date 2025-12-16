@@ -1,0 +1,72 @@
+.progress-bar {
+  position: relative;
+  width: calc(100% - 32px);
+  margin: 0 16px;
+  height: 28px;
+  border-radius: 22px;
+  background: rgba(44, 44, 44, 0.8);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.progress-bar__fill {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 24px;
+  border-radius: 14px;
+  background: linear-gradient(270deg, rgba(31, 206, 227, 1) 0%, rgba(17, 113, 125, 1) 100%);
+  transition: width 0.3s ease;
+  
+}
+
+.progress-bar__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 9px;
+}
+
+.progress-bar__left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.progress-bar__coin-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.progress-bar__text {
+    display: flex;
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.011em;
+    text-align: left;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.progress-bar__right {
+    flex-shrink: 0;
+    display: flex;
+  align-items: center;
+}
+
+.progress-bar__level {
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.011em;
+    text-align: right;
+}

@@ -1,0 +1,93 @@
+.footer{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: row;
+    border-radius: 6px;
+    box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.38);
+    backdrop-filter: blur(10px);
+    background: rgba(44, 44, 44, 0.8);
+    padding: 0px 25px;
+    gap: 8px;
+    justify-content: center;
+    position: relative;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background: none;
+    padding-top: 4px;
+    padding-bottom: 7px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.footer-item:nth-child(3){
+    border-radius: 16px;
+    box-shadow: inset 0px -5px 15px 0px rgba(0, 0, 0, 0.25), 0px 7px 8.899999618530273px 0px rgba(0, 0, 0, 0.25), inset 0px 4px 5.800000190734863px 0px rgba(255, 255, 255, 0.45);
+    background: linear-gradient(180deg, rgba(70.6153564453125, 242.7076873779297, 255, 0.3), rgba(0, 180.4124755859375, 208.1682586669922, 0.3) 100%);
+    width: 72px;
+    height: 70px;
+    /* Поднимаем кнопку на 7px вверх */
+    margin-top: -7px;
+    /* Компенсируем смещение снизу, чтобы футер не растягивался */
+    margin-bottom: -5px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon{
+    width: 39px;
+    height: 40px;
+}
+
+.footer-item:nth-child(3) .footer-icon{
+    width: 56px;
+    height: 56px;
+}
+
+.footer-item-active {
+    border-top: 1.5px solid rgba(56, 223, 239, 1);
+}
+
+/* Убираем border-top для центральной кнопки */
+.footer-item:nth-child(3).footer-item-active {
+    border-top: none;
+}
+
+.footer-label {
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -1.1%;
+    text-align: center;
+}
+.footer-notification-dot {
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(70.62, 242.71, 255, 1), rgba(0, 180.41, 208.17, 1) 83%);
+    box-shadow: 0px 0px 6px rgba(56, 223, 239, 0.8);
+    z-index: 10;
+}
+
+/* Для центральной кнопки позиционируем точку по-другому */
+.footer-item:nth-child(3) .footer-notification-dot {
+    top: 8px;
+    right: 12px;
+}
